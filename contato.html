@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - RizeMax | Fale Conosco</title>
+    <meta name="description" content="Entre em contato com a RizeMax. Nossos especialistas estão prontos para ajudar você com soluções em energia e tecnologia.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><a href="index.html">RizeMax</a></h1>
+                    <span class="tagline">Power Solutions</span>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link">Produtos</a>
+                            <div class="dropdown-content">
+                                <a href="produtos.html#energia">Soluções de Energia</a>
+                                <a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a>
+                                <a href="produtos.html#acessorios">Acessórios</a>
+                                <a href="produtos.html#novidades">Novidades</a>
+                            </div>
+                        </li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link active">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+                <button class="search-submit">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Entre em <span class="highlight">Contato</span></h1>
+                <p class="hero-description">
+                    Nossa equipe de especialistas está pronta para ajudar você a encontrar 
+                    a solução perfeita para suas necessidades em energia e tecnologia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="contact-methods">
+        <div class="container">
+            <h2 class="section-title">Como Falar Conosco</h2>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">📞</div>
+                    <h3>Telefone</h3>
+                    <p>Atendimento de Segunda à Sexta</p>
+                    <div class="method-info">
+                        <strong>(11) 99999-9999</strong>
+                        <span>Das 8h às 18h</span>
+                    </div>
+                    <a href="tel:+5511999999999" class="btn btn-primary">Ligar Agora</a>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">📧</div>
+                    <h3>E-mail</h3>
+                    <p>Resposta em até 24 horas</p>
+                    <div class="method-info">
+                        <strong>contato@rizemax.com.br</strong>
+                        <span>Suporte técnico e vendas</span>
+                    </div>
+                    <a href="mailto:contato@rizemax.com.br" class="btn btn-primary">Enviar E-mail</a>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">💬</div>
+                    <h3>WhatsApp</h3>
+                    <p>Atendimento rápido e direto</p>
+                    <div class="method-info">
+                        <strong>(11) 99999-9999</strong>
+                        <span>Chat online disponível</span>
+                    </div>
+                    <a href="https://wa.me/5511999999999" class="btn btn-primary" target="_blank">Abrir WhatsApp</a>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">📍</div>
+                    <h3>Endereço</h3>
+                    <p>Visite nossa sede em São Paulo</p>
+                    <div class="method-info">
+                        <strong>Av. Paulista, 1000</strong>
+                        <span>São Paulo - SP, 01310-100</span>
+                    </div>
+                    <a href="#" class="btn btn-primary" onclick="showMap()">Ver no Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="form-text">
+                    <h2>Envie sua Mensagem</h2>
+                    <p>
+                        Preencha o formulário abaixo e nossa equipe entrará em contato 
+                        com você o mais breve possível para oferecer a melhor solução.
+                    </p>
+                    
+                    <div class="form-benefits">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">✅</div>
+                            <span>Resposta em até 24 horas</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🎯</div>
+                            <span>Atendimento personalizado</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">💡</div>
+                            <span>Consultoria especializada</span>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">🔒</div>
+                            <span>Seus dados são protegidos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Nome Completo *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Empresa</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecione um assunto</option>
+                                <option value="orcamento">Solicitar Orçamento</option>
+                                <option value="suporte">Suporte Técnico</option>
+                                <option value="produto">Informações sobre Produtos</option>
+                                <option value="parceria">Parceria Comercial</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensagem *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Descreva sua necessidade ou dúvida..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <span class="checkmark"></span>
+                            Desejo receber novidades e ofertas especiais por e-mail
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="checkmark"></span>
+                            Concordo com a <a href="#" data-policy="privacy">Política de Privacidade</a> *
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">Enviar Mensagem</span>
+                        <span class="btn-loading" style="display: none;">Enviando...</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Qual o prazo de entrega dos produtos?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O prazo de entrega varia conforme o produto e localização. Geralmente, produtos em estoque são entregues em 2-5 dias úteis para a região metropolitana de São Paulo e 5-10 dias úteis para outras regiões do Brasil.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Vocês oferecem garantia nos produtos?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, todos os nossos produtos possuem garantia do fabricante. Além disso, oferecemos garantia estendida e suporte técnico especializado para garantir a melhor experiência do cliente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>É possível solicitar orçamento personalizado?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Claro! Nossa equipe de especialistas pode desenvolver soluções personalizadas de acordo com suas necessidades específicas. Entre em contato para discutir seu projeto.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Vocês oferecem suporte técnico?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, oferecemos suporte técnico completo, incluindo instalação, configuração, manutenção e treinamento. Nossa equipe está disponível para garantir o funcionamento perfeito dos equipamentos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Como posso acompanhar meu pedido?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Após a confirmação do pedido, você receberá um código de rastreamento por e-mail para acompanhar sua entrega em tempo real. Também pode entrar em contato conosco a qualquer momento.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Atendem todo o Brasil?</span>
+                        <div class="faq-icon">+</div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim, atendemos todo o território nacional. Temos parceiros estratégicos em diversas regiões para garantir a melhor logística e suporte local aos nossos clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>RizeMax</h3>
+                        <p>Maximizando seu potencial através da tecnologia e inovação.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul class="footer-links">
+                        <li><a href="produtos.html#energia">Soluções de Energia</a></li>
+                        <li><a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a></li>
+                        <li><a href="produtos.html#cabos">Cabos e Conectores</a></li>
+                        <li><a href="produtos.html#escritorio">Equipamentos de Escritório</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" data-policy="privacy">Política de Privacidade</a></li>
+                        <li><a href="#" data-policy="terms">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📧 contato@rizemax.com.br</p>
+                        <p>📞 (11) 99999-9999</p>
+                        <p>📍 São Paulo, SP - Brasil</p>
+                        <p>🕒 Seg-Sex: 8h às 18h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RizeMax. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para maximizar seu potencial</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/contato.js"></script>
+    <script src="images/placeholder-config.js"></script>
+</body>
+</html>

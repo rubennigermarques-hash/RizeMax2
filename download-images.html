@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download de Imagens - RizeMax</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .image-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .preview {
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+        .download-btn {
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.25rem;
+            transition: background 0.3s ease;
+        }
+        .download-btn:hover {
+            background: #5a6fd8;
+        }
+        .download-all {
+            background: #4ecdc4;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .placeholder-info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🖼️ Central de Imagens RizeMax</h1>
+        <p>Baixe todas as imagens necessárias para o seu site</p>
+    </div>
+
+    <div class="instructions">
+        <h3>📋 Instruções de Uso:</h3>
+        <ol>
+            <li><strong>Baixe as imagens:</strong> Clique nos links abaixo para baixar cada imagem</li>
+            <li><strong>Organize:</strong> Coloque as imagens nas pastas corretas dentro de <code>/images/</code></li>
+            <li><strong>Renomeie:</strong> Use exatamente os nomes sugeridos para cada arquivo</li>
+            <li><strong>Otimize:</strong> Comprima as imagens para web (recomendado: JPEG 80% qualidade)</li>
+        </ol>
+    </div>
+
+    <div class="placeholder-info">
+        <h4>💡 Atualmente usando placeholders automáticos</h4>
+        <p>O site já funciona com imagens placeholder do Unsplash. Você pode usar as imagens atuais ou substituí-las por suas próprias imagens seguindo os nomes de arquivo sugeridos.</p>
+    </div>
+
+    <!-- Produtos -->
+    <div class="section">
+        <h2>🛍️ Imagens de Produtos</h2>
+        <p><strong>Tamanho recomendado:</strong> 400x300px | <strong>Formato:</strong> JPEG | <strong>Pasta:</strong> images/products/</p>
+        
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop" alt="UPS" class="preview">
+                <h4>UPS Online 3000VA</h4>
+                <p><strong>Nome:</strong> ups-3000va.jpg</p>
+                <a href="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop&dl=" class="download-btn" download="ups-3000va.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=300&fit=crop" alt="Bateria" class="preview">
+                <h4>Bateria Selada 12V</h4>
+                <p><strong>Nome:</strong> bateria-12v.jpg</p>
+                <a href="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=400&h=300&fit=crop&dl=" class="download-btn" download="bateria-12v.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop" alt="Notebook" class="preview">
+                <h4>Notebook Business</h4>
+                <p><strong>Nome:</strong> notebook-business.jpg</p>
+                <a href="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=300&fit=crop&dl=" class="download-btn" download="notebook-business.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop" alt="Tablet" class="preview">
+                <h4>Tablet 10" HD</h4>
+                <p><strong>Nome:</strong> tablet-10-hd.jpg</p>
+                <a href="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=300&fit=crop&dl=" class="download-btn" download="tablet-10-hd.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1558618666-fccc54c84052?w=400&h=300&fit=crop" alt="Cabo HDMI" class="preview">
+                <h4>Cabo HDMI 4K</h4>
+                <p><strong>Nome:</strong> cabo-hdmi-4k.jpg</p>
+                <a href="https://images.unsplash.com/photo-1558618666-fccc54c84052?w=400&h=300&fit=crop&dl=" class="download-btn" download="cabo-hdmi-4k.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop" alt="Impressora" class="preview">
+                <h4>Impressora Multifuncional</h4>
+                <p><strong>Nome:</strong> impressora-multifuncional.jpg</p>
+                <a href="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop&dl=" class="download-btn" download="impressora-multifuncional.jpg">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Equipe -->
+    <div class="section">
+        <h2>👥 Fotos da Equipe</h2>
+        <p><strong>Tamanho recomendado:</strong> 300x300px | <strong>Formato:</strong> JPEG | <strong>Pasta:</strong> images/team/</p>
+        
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="CEO" class="preview">
+                <h4>Carlos Silva - CEO</h4>
+                <p><strong>Nome:</strong> carlos-silva.jpg</p>
+                <a href="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&dl=" class="download-btn" download="carlos-silva.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b02c?w=300&h=300&fit=crop&crop=face" alt="Diretora" class="preview">
+                <h4>Ana Santos - Diretora</h4>
+                <p><strong>Nome:</strong> ana-santos.jpg</p>
+                <a href="https://images.unsplash.com/photo-1494790108755-2616b612b02c?w=300&h=300&fit=crop&crop=face&dl=" class="download-btn" download="ana-santos.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Gerente" class="preview">
+                <h4>Roberto Lima - Gerente</h4>
+                <p><strong>Nome:</strong> roberto-lima.jpg</p>
+                <a href="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face&dl=" class="download-btn" download="roberto-lima.jpg">Download</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Coordenadora" class="preview">
+                <h4>Marina Costa - Coordenadora</h4>
+                <p><strong>Nome:</strong> marina-costa.jpg</p>
+                <a href="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face&dl=" class="download-btn" download="marina-costa.jpg">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero/Banner -->
+    <div class="section">
+        <h2>🎨 Imagens Hero/Banner</h2>
+        <p><strong>Tamanho recomendado:</strong> 1920x1080px | <strong>Formato:</strong> JPEG | <strong>Pasta:</strong> images/hero/</p>
+        
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop" alt="Hero Background" class="preview">
+                <h4>Background Principal</h4>
+                <p><strong>Nome:</strong> hero-bg.jpg</p>
+                <a href="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1920&h=1080&fit=crop&dl=" class="download-btn" download="hero-bg.jpg">Download HD</a>
+            </div>
+
+            <div class="image-item">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop" alt="Energy" class="preview">
+                <h4>Imagem Energia</h4>
+                <p><strong>Nome:</strong> hero-energy.jpg</p>
+                <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop&dl=" class="download-btn" download="hero-energy.jpg">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ferramentas -->
+    <div class="section">
+        <h2>🛠️ Ferramentas Úteis</h2>
+        
+        <h3>📸 Sites para Imagens Gratuitas:</h3>
+        <ul>
+            <li><a href="https://unsplash.com/s/photos/technology" target="_blank">Unsplash - Technology</a></li>
+            <li><a href="https://www.pexels.com/search/electronics/" target="_blank">Pexels - Electronics</a></li>
+            <li><a href="https://pixabay.com/images/search/computer/" target="_blank">Pixabay - Computer</a></li>
+            <li><a href="https://burst.shopify.com/technology" target="_blank">Burst - Technology</a></li>
+        </ul>
+
+        <h3>🔧 Ferramentas de Otimização:</h3>
+        <ul>
+            <li><a href="https://tinyjpg.com/" target="_blank">TinyJPG - Compressão de imagens</a></li>
+            <li><a href="https://squoosh.app/" target="_blank">Squoosh - Editor online</a></li>
+            <li><a href="https://www.iloveimg.com/resize-image" target="_blank">ILoveIMG - Redimensionar</a></li>
+        </ul>
+
+        <h3>🎨 Geradores de Logo:</h3>
+        <ul>
+            <li><a href="https://www.canva.com/create/logos/" target="_blank">Canva - Logo Maker</a></li>
+            <li><a href="https://looka.com/" target="_blank">Looka - AI Logo Generator</a></li>
+            <li><a href="https://www.logomaker.com/" target="_blank">LogoMaker</a></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📋 Checklist Final</h2>
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px;">
+            <h4>✅ Verificar antes de publicar:</h4>
+            <ul style="margin: 1rem 0;">
+                <li>☐ Todas as imagens estão nas pastas corretas</li>
+                <li>☐ Nomes dos arquivos conferem com o código</li>
+                <li>☐ Imagens estão otimizadas (< 500KB cada)</li>
+                <li>☐ Testado em desktop e mobile</li>
+                <li>☐ Logo da empresa personalizado</li>
+                <li>☐ Fotos da equipe real (se disponível)</li>
+                <li>☐ Produtos com imagens reais</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        console.log('🖼️ Central de Imagens RizeMax carregada!');
+        console.log('Dica: Use Ctrl+S para salvar as imagens diretamente');
+        
+        // Adicionar informações sobre cada seção
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.addEventListener('click', function(e) {
+                if (e.target.classList.contains('download-btn')) {
+                    console.log('Baixando:', e.target.textContent);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
