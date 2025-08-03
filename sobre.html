@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - RizeMax | Nossa História e Missão</title>
+    <meta name="description" content="Conheça a RizeMax, nossa história, missão e compromisso em fornecer as melhores soluções em energia e tecnologia.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><a href="index.html">RizeMax</a></h1>
+                    <span class="tagline">Power Solutions</span>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link">Produtos</a>
+                            <div class="dropdown-content">
+                                <a href="produtos.html#energia">Soluções de Energia</a>
+                                <a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a>
+                                <a href="produtos.html#acessorios">Acessórios</a>
+                                <a href="produtos.html#novidades">Novidades</a>
+                            </div>
+                        </li>
+                        <li><a href="sobre.html" class="nav-link active">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+                <button class="search-submit">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Conheça a <span class="highlight">RizeMax</span></h1>
+                <p class="hero-description">
+                    Há mais de uma década revolucionando o mercado de energia e tecnologia, 
+                    oferecendo soluções inovadoras para empresas e consumidores.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa História -->
+    <section class="story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2>Nossa História</h2>
+                    <p>
+                        A RizeMax nasceu em 2010 com a visão de transformar a maneira como as pessoas 
+                        e empresas lidam com energia e tecnologia. Fundada por especialistas do setor, 
+                        nossa empresa começou como uma pequena distribuidora de equipamentos eletrônicos 
+                        e evoluiu para se tornar uma das principais referências em soluções de energia 
+                        e tecnologia no Brasil.
+                    </p>
+                    <p>
+                        Ao longo dos anos, construímos uma reputação sólida baseada na qualidade dos 
+                        nossos produtos, excelência no atendimento e compromisso com a inovação. 
+                        Hoje, atendemos milhares de clientes em todo o país, desde pequenas empresas 
+                        até grandes corporações.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2010</div>
+                            <div class="timeline-content">
+                                <h4>Fundação</h4>
+                                <p>Início das atividades em São Paulo</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015</div>
+                            <div class="timeline-content">
+                                <h4>Expansão</h4>
+                                <p>Abertura de filiais em todo o país</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h4>Digitalização</h4>
+                                <p>Lançamento da plataforma online</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2024</div>
+                            <div class="timeline-content">
+                                <h4>Liderança</h4>
+                                <p>Referência nacional em soluções de energia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Missão, Visão e Valores -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Nossos Princípios</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Missão</h3>
+                    <p>
+                        Fornecer soluções inovadoras e confiáveis em energia e tecnologia, 
+                        maximizando o potencial dos nossos clientes através de produtos 
+                        de qualidade superior e atendimento excepcional.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">👁️</div>
+                    <h3>Visão</h3>
+                    <p>
+                        Ser reconhecida como a principal empresa de soluções em energia 
+                        e tecnologia do Brasil, conhecida pela excelência, inovação e 
+                        compromisso com a sustentabilidade.
+                    </p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Qualidade sem compromissos</li>
+                        <li>Inovação constante</li>
+                        <li>Atendimento humanizado</li>
+                        <li>Sustentabilidade</li>
+                        <li>Transparência</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title">Nossa Equipe</h2>
+            <p class="team-description">
+                Conheça os profissionais dedicados que fazem a RizeMax ser uma empresa de excelência
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">👨‍💼</div>
+                    <h3>Carlos Silva</h3>
+                    <p class="member-role">CEO & Fundador</p>
+                    <p class="member-description">
+                        Engenheiro Elétrico com mais de 20 anos de experiência no setor de energia. 
+                        Visionário e líder estratégico da RizeMax.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">👩‍💼</div>
+                    <h3>Ana Santos</h3>
+                    <p class="member-role">Diretora Técnica</p>
+                    <p class="member-description">
+                        Especialista em soluções tecnológicas com foco em inovação e 
+                        desenvolvimento de produtos de alta qualidade.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">👨‍💻</div>
+                    <h3>Roberto Lima</h3>
+                    <p class="member-role">Gerente de Vendas</p>
+                    <p class="member-description">
+                        Profissional experiente em relacionamento com clientes e 
+                        desenvolvimento de estratégias comerciais eficazes.
+                    </p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-photo">👩‍🔧</div>
+                    <h3>Marina Costa</h3>
+                    <p class="member-role">Coordenadora de Suporte</p>
+                    <p class="member-description">
+                        Responsável por garantir a excelência no atendimento ao cliente 
+                        e suporte técnico especializado.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificações -->
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">Certificações e Parceiros</h2>
+            <div class="certifications-grid">
+                <div class="cert-item">
+                    <div class="cert-icon">🏆</div>
+                    <h4>ISO 9001:2015</h4>
+                    <p>Gestão da Qualidade</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">🌱</div>
+                    <h4>ISO 14001</h4>
+                    <p>Gestão Ambiental</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">⚡</div>
+                    <h4>ANEEL</h4>
+                    <p>Agência Nacional de Energia Elétrica</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">🔒</div>
+                    <h4>INMETRO</h4>
+                    <p>Produtos Certificados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para fazer parte da nossa história?</h2>
+                <p>Entre em contato conosco e descubra como podemos ajudar a maximizar seu potencial.</p>
+                <div class="cta-actions">
+                    <a href="contato.html" class="btn btn-primary">Fale Conosco</a>
+                    <a href="produtos.html" class="btn btn-outline">Ver Produtos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>RizeMax</h3>
+                        <p>Maximizando seu potencial através da tecnologia e inovação.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul class="footer-links">
+                        <li><a href="produtos.html#energia">Soluções de Energia</a></li>
+                        <li><a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a></li>
+                        <li><a href="produtos.html#cabos">Cabos e Conectores</a></li>
+                        <li><a href="produtos.html#escritorio">Equipamentos de Escritório</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" data-policy="privacy">Política de Privacidade</a></li>
+                        <li><a href="#" data-policy="terms">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📧 contato@rizemax.com.br</p>
+                        <p>📞 (11) 99999-9999</p>
+                        <p>📍 São Paulo, SP - Brasil</p>
+                        <p>🕒 Seg-Sex: 8h às 18h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RizeMax. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para maximizar seu potencial</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    
+    <style>
+        /* Estilos específicos da página Sobre */
+        .logo a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .story {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .story-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .story-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -0.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+
+        .timeline-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+
+        .timeline-content p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .values {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .value-card p, .value-card ul {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .value-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-card li {
+            padding: 0.25rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .value-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .team {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .team-description {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 3rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-member {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .member-photo {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .team-member h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .member-role {
+            color: #667eea;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .member-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .certifications {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .cert-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .cert-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .cert-item p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .story-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .story-text h2 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .certifications-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</body>
+</html>

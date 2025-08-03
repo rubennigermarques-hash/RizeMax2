@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RizeMax - Soluções em Energia e Tecnologia</title>
+    <meta name="description" content="RizeMax oferece as melhores soluções em energia, tecnologia e equipamentos eletrônicos para empresas e consumidores.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>RizeMax</h1>
+                    <span class="tagline">Power Solutions</span>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Início</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link">Produtos</a>
+                            <div class="dropdown-content">
+                                <a href="produtos.html#energia">Soluções de Energia</a>
+                                <a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a>
+                                <a href="produtos.html#acessorios">Acessórios</a>
+                                <a href="produtos.html#novidades">Novidades</a>
+                            </div>
+                        </li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+                <button class="search-submit">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Maximize Seu Potencial com <span class="highlight">RizeMax</span></h1>
+                <p class="hero-description">
+                    Oferecemos as mais avançadas soluções em energia, tecnologia e equipamentos eletrônicos 
+                    para impulsionar seu negócio e vida pessoal.
+                </p>
+                <div class="hero-actions">
+                    <a href="produtos.html" class="btn btn-primary">Explorar Produtos</a>
+                    <a href="contato.html" class="btn btn-secondary">Fale Conosco</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Energia Inteligente</h3>
+                    <p>Soluções inovadoras em energia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Nossas Categorias</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="window.location.href='produtos.html#energia'">
+                    <div class="category-icon">🔋</div>
+                    <h3>Soluções de Energia</h3>
+                    <p>UPS, Baterias, Nobreaks e Sistemas de Energia</p>
+                    <div class="category-arrow">→</div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='produtos.html#eletronicos'">
+                    <div class="category-icon">💻</div>
+                    <h3>Equipamentos Eletrônicos</h3>
+                    <p>Computadores, Laptops, Tablets e Acessórios</p>
+                    <div class="category-arrow">→</div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='produtos.html#cabos'">
+                    <div class="category-icon">🔌</div>
+                    <h3>Cabos e Conectores</h3>
+                    <p>Cabos de Rede, USB, Energia e Audio/Vídeo</p>
+                    <div class="category-arrow">→</div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='produtos.html#escritorio'">
+                    <div class="category-icon">🖨️</div>
+                    <h3>Equipamentos de Escritório</h3>
+                    <p>Impressoras, Fragmentadoras, Laminadoras</p>
+                    <div class="category-arrow">→</div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='produtos.html#bancarios'">
+                    <div class="category-icon">💰</div>
+                    <h3>Equipamentos Bancários</h3>
+                    <p>Contadores de Notas, Detectores, Máquinas</p>
+                    <div class="category-arrow">→</div>
+                </div>
+                
+                <div class="category-card" onclick="window.location.href='produtos.html#armazenamento'">
+                    <div class="category-icon">💾</div>
+                    <h3>Armazenamento</h3>
+                    <p>USB, CD/DVD, Pen Drives e Mídias</p>
+                    <div class="category-arrow">→</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-content">
+                <div class="features-text">
+                    <h2>Por que Escolher a RizeMax?</h2>
+                    <p>Com mais de uma década de experiência no mercado, somos especialistas em fornecer soluções tecnológicas de alta qualidade.</p>
+                    
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✅</div>
+                            <div>
+                                <h4>Qualidade Garantida</h4>
+                                <p>Produtos testados e certificados com garantia estendida</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🚚</div>
+                            <div>
+                                <h4>Entrega Rápida</h4>
+                                <p>Logística eficiente com entrega em todo o território nacional</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">🔧</div>
+                            <div>
+                                <h4>Suporte Técnico</h4>
+                                <p>Equipe especializada para instalação e manutenção</p>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <div class="feature-icon">💎</div>
+                            <div>
+                                <h4>Preços Competitivos</h4>
+                                <p>Melhor custo-benefício do mercado com condições especiais</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="features-image">
+                    <div class="stats-card">
+                        <div class="stat">
+                            <h3>15+</h3>
+                            <p>Anos de Experiência</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10K+</h3>
+                            <p>Clientes Satisfeitos</p>
+                        </div>
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Produtos Disponíveis</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Suporte Online</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Maximizar seu Potencial?</h2>
+                <p>Entre em contato conosco hoje mesmo e descubra como nossas soluções podem transformar seu negócio.</p>
+                <div class="cta-actions">
+                    <a href="contato.html" class="btn btn-primary">Solicitar Orçamento</a>
+                    <a href="tel:+5511999999999" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        (11) 99999-9999
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>RizeMax</h3>
+                        <p>Maximizando seu potencial através da tecnologia e inovação.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul class="footer-links">
+                        <li><a href="produtos.html#energia">Soluções de Energia</a></li>
+                        <li><a href="produtos.html#eletronicos">Equipamentos Eletrônicos</a></li>
+                        <li><a href="produtos.html#cabos">Cabos e Conectores</a></li>
+                        <li><a href="produtos.html#escritorio">Equipamentos de Escritório</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" data-policy="privacy">Política de Privacidade</a></li>
+                        <li><a href="#" data-policy="terms">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📧 contato@rizemax.com.br</p>
+                        <p>📞 (11) 99999-9999</p>
+                        <p>📍 São Paulo, SP - Brasil</p>
+                        <p>🕒 Seg-Sex: 8h às 18h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RizeMax. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para maximizar seu potencial</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

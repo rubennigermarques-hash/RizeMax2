@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - RizeMax | Soluções em Energia e Tecnologia</title>
+    <meta name="description" content="Explore nossa ampla gama de produtos em energia, tecnologia e equipamentos eletrônicos. Qualidade garantida e preços competitivos.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/produtos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1><a href="index.html">RizeMax</a></h1>
+                    <span class="tagline">Power Solutions</span>
+                </div>
+                
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Início</a></li>
+                        <li class="dropdown">
+                            <a href="produtos.html" class="nav-link active">Produtos</a>
+                            <div class="dropdown-content">
+                                <a href="#energia">Soluções de Energia</a>
+                                <a href="#eletronicos">Equipamentos Eletrônicos</a>
+                                <a href="#acessorios">Acessórios</a>
+                                <a href="#novidades">Novidades</a>
+                            </div>
+                        </li>
+                        <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                        <li><a href="contato.html" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="search-btn" onclick="toggleSearch()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar" id="searchBar">
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+                <button class="search-submit">Buscar</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="index.html">Início</a>
+                <span class="separator">›</span>
+                <span class="current">Produtos</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nossos Produtos</h1>
+            <p>Descubra nossa ampla linha de produtos em energia, tecnologia e equipamentos eletrônicos</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label for="category-filter">Categoria:</label>
+                    <select id="category-filter" onchange="filterProducts()">
+                        <option value="all">Todas as Categorias</option>
+                        <option value="energia">Soluções de Energia</option>
+                        <option value="eletronicos">Equipamentos Eletrônicos</option>
+                        <option value="cabos">Cabos e Conectores</option>
+                        <option value="escritorio">Equipamentos de Escritório</option>
+                        <option value="bancarios">Equipamentos Bancários</option>
+                        <option value="armazenamento">Armazenamento</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-filter">Preço:</label>
+                    <select id="price-filter" onchange="filterProducts()">
+                        <option value="all">Todos os Preços</option>
+                        <option value="low">Até R$ 100</option>
+                        <option value="medium">R$ 100 - R$ 500</option>
+                        <option value="high">R$ 500 - R$ 1.000</option>
+                        <option value="premium">Acima de R$ 1.000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="sort-filter">Ordenar por:</label>
+                    <select id="sort-filter" onchange="sortProducts()">
+                        <option value="name">Nome</option>
+                        <option value="price-low">Menor Preço</option>
+                        <option value="price-high">Maior Preço</option>
+                        <option value="popularity">Popularidade</option>
+                    </select>
+                </div>
+                
+                <button class="clear-filters" onclick="clearFilters()">Limpar Filtros</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products" id="produtos">
+        <div class="container">
+            <!-- Soluções de Energia -->
+            <div class="category-section" id="energia">
+                <h2 class="category-title">🔋 Soluções de Energia</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="energia" data-price="800">
+                        <div class="product-image">
+                            <div class="product-badge">Destaque</div>
+                            <div class="placeholder-image">📱</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">UPS Online 3000VA</h3>
+                            <p class="product-description">Nobreak online com proteção total contra oscilações de energia</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 2.499,00</span>
+                                <span class="old-price">R$ 2.799,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="energia" data-price="400">
+                        <div class="product-image">
+                            <div class="placeholder-image">🔋</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bateria Selada 12V 7Ah</h3>
+                            <p class="product-description">Bateria selada para nobreaks e sistemas de segurança</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 89,90</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="energia" data-price="1200">
+                        <div class="product-image">
+                            <div class="product-badge new">Novo</div>
+                            <div class="placeholder-image">⚡</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Estabilizador 5000VA</h3>
+                            <p class="product-description">Estabilizador de tensão para proteção de equipamentos</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 1.299,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipamentos Eletrônicos -->
+            <div class="category-section" id="eletronicos">
+                <h2 class="category-title">💻 Equipamentos Eletrônicos</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="eletronicos" data-price="1800">
+                        <div class="product-image">
+                            <div class="placeholder-image">💻</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Notebook Business Pro</h3>
+                            <p class="product-description">Notebook para uso corporativo com alta performance</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 3.499,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="eletronicos" data-price="600">
+                        <div class="product-image">
+                            <div class="placeholder-image">📱</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Tablet 10" HD</h3>
+                            <p class="product-description">Tablet com tela HD para trabalho e entretenimento</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 899,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cabos e Conectores -->
+            <div class="category-section" id="cabos">
+                <h2 class="category-title">🔌 Cabos e Conectores</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="cabos" data-price="50">
+                        <div class="product-image">
+                            <div class="placeholder-image">🔌</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cabo HDMI 4K 2m</h3>
+                            <p class="product-description">Cabo HDMI de alta qualidade para resolução 4K</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 45,90</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="cabos" data-price="30">
+                        <div class="product-image">
+                            <div class="placeholder-image">📡</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cabo Rede Cat6 5m</h3>
+                            <p class="product-description">Cabo de rede categoria 6 para alta velocidade</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 25,90</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipamentos de Escritório -->
+            <div class="category-section" id="escritorio">
+                <h2 class="category-title">🖨️ Equipamentos de Escritório</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="escritorio" data-price="800">
+                        <div class="product-image">
+                            <div class="placeholder-image">🖨️</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Impressora Multifuncional</h3>
+                            <p class="product-description">Impressora, scanner e copiadora em um só equipamento</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 1.199,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="escritorio" data-price="300">
+                        <div class="product-image">
+                            <div class="placeholder-image">📄</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fragmentadora de Papel</h3>
+                            <p class="product-description">Fragmentadora para documentos confidenciais</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 299,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Equipamentos Bancários -->
+            <div class="category-section" id="bancarios">
+                <h2 class="category-title">💰 Equipamentos Bancários</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="bancarios" data-price="1500">
+                        <div class="product-image">
+                            <div class="placeholder-image">💵</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Contador de Cédulas</h3>
+                            <p class="product-description">Contador automático com detector de notas falsas</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 1.899,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Armazenamento -->
+            <div class="category-section" id="armazenamento">
+                <h2 class="category-title">💾 Armazenamento</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="armazenamento" data-price="100">
+                        <div class="product-image">
+                            <div class="placeholder-image">💾</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Pen Drive 64GB USB 3.0</h3>
+                            <p class="product-description">Pen drive de alta velocidade para transferência de dados</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 89,90</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="armazenamento" data-price="150">
+                        <div class="product-image">
+                            <div class="placeholder-image">💿</div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">HD Externo 1TB</h3>
+                            <p class="product-description">Disco rígido externo portátil para backup</p>
+                            <div class="product-price">
+                                <span class="current-price">R$ 299,00</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="addToCart(this)">Solicitar Orçamento</button>
+                                <button class="btn-icon" onclick="toggleWishlist(this)">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 8.5c0-2.5-2-4.5-4.5-4.5S12 6 12 8.5 14.5 13 12 21c-2.5-8-4.5-12.5-4.5-12.5S5 6 7.5 4 12 6 12 8.5z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Não encontrou o que procura?</h2>
+                <p>Nossa equipe especializada pode ajudar você a encontrar a solução perfeita para suas necessidades.</p>
+                <div class="cta-actions">
+                    <a href="contato.html" class="btn btn-primary">Fale com um Especialista</a>
+                    <a href="tel:+5511999999999" class="btn btn-outline">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        (11) 99999-9999
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>RizeMax</h3>
+                        <p>Maximizando seu potencial através da tecnologia e inovação.</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Produtos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#energia">Soluções de Energia</a></li>
+                        <li><a href="#eletronicos">Equipamentos Eletrônicos</a></li>
+                        <li><a href="#cabos">Cabos e Conectores</a></li>
+                        <li><a href="#escritorio">Equipamentos de Escritório</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul class="footer-links">
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#" data-policy="privacy">Política de Privacidade</a></li>
+                        <li><a href="#" data-policy="terms">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <div class="contact-info">
+                        <p>📧 contato@rizemax.com.br</p>
+                        <p>📞 (11) 99999-9999</p>
+                        <p>📍 São Paulo, SP - Brasil</p>
+                        <p>🕒 Seg-Sex: 8h às 18h</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 RizeMax. Todos os direitos reservados.</p>
+                <p>Desenvolvido com ❤️ para maximizar seu potencial</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script src="js/produtos.js"></script>
+</body>
+</html>
